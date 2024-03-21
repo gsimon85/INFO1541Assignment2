@@ -74,11 +74,14 @@ public final class CommissionEmployee extends Employee {
 
     /**
      * Increase's the employees commission rate by .002
+     *
+     * @return
      */
     @Override
-    public void annualRaise()
+    public short annualRaise()
     {
        rate += .002;
+        return 0;
     }
 
     /**

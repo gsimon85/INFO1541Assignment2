@@ -199,8 +199,10 @@ public abstract class Employee implements Printable {
 
     /**
      * Abstract method that gives the employee's an annual raise
+     *
+     * @return
      */
-    public abstract void annualRaise();
+    public abstract short annualRaise();
 
     /**
      * Abstract mehtod that gives the employee's a holiday bonus

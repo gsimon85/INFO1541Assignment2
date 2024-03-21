@@ -9,7 +9,7 @@ import EmployeeBlueprints.EmployeeType;
  * @version 1.0.1
  */
 
-public final class HourlyEmployee extends Employee {
+public class HourlyEmployee extends Employee {
     private double wage;
     private double hoursWorked;
 
@@ -39,13 +39,16 @@ public final class HourlyEmployee extends Employee {
 
     /**
      * Add to the hours worked by the value sent. Checks to make sure value is positive.
+     *
      * @param h double of hours to add
+     * @return
      */
-    public void increaseHours(double h)
+    public short increaseHours(double h)
     {
         if (h > 0) {
             hoursWorked += h;
         }
+        return 0;
     }
 
     /**
@@ -83,12 +86,15 @@ public final class HourlyEmployee extends Employee {
 
     /**
      * Increases the employee's wage by 5%
+     *
+     * @return
      */
     @Override
-    public void annualRaise()
+    public short annualRaise()
     {
         double raise = (double)Math.round(wage * .05 * 100)/100;
         wage += raise;
+        return 0;
     }
 
     /**
