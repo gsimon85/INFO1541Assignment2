@@ -11,6 +11,9 @@ class HourlyEmployeeTest {
     void increaseHoursTest() {
         emp.increaseHours(16);
         assertEquals(16, emp.getHoursWorked());
+    }
+    @Test
+    void increaseHoursTest2() {
         emp.increaseHours(-10);
         assertEquals(-10, emp.getHoursWorked());
     }
